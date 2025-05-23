@@ -29,8 +29,7 @@
 / {
 
     chosen {
-        zmk,matrix-transform = &five_column_transform; // Add this
-        zmk,physical-layout = &corne_5col_layout; // Modified
+        zmk,matrix-transform = &foostan_corne_5col_layout
     };
 
     combos {
