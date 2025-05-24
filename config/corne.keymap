@@ -42,9 +42,9 @@
     };
 
     behaviors {
-        mt_hold_trigger: mt_hold_trigger {
+        mt_hold_release: mt_hold_release {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_HOLD_TRIGGER";
+            label = "MT_HOLD_RELEASE";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -103,9 +103,9 @@
             bindings = <&mkp MCLK>;
         };
 
-        mt_bal_trigger: mt_bal_trigger {
+        mt_bal_release: mt_bal_release {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_BAL_TRIGGER";
+            label = "MT_BAL_RELEASE";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -140,8 +140,8 @@
             bindings = <
 &kp Q                    &kp W  &kp E                    &kp R        &kp T        &kp Y         &kp U            &kp I            &kp O    &kp P                         
 &kp A                    &kp S  &kp D                    &kp F        &kp G        &kp H         &kp J            &kp K            &kp L    &kp SEMI                      
-&mt_hold_t LEFT_SHIFT Z  &kp X  &kp C                    &kp V        &kp B        &kp N         &kp M            &kp COMMA        &kp DOT  &mt_hold_t RIGHT_SHIFT SLASH  
-                                              &mt_hold_t LCTRL ESCAPE  &lt 1 UNDER  &kp SPACE    &lt 5 RETURN  &lt 3 BACKSPACE  &mt RALT DELETE
+&mt_hold_release LEFT_SHIFT Z  &kp X  &kp C                    &kp V        &kp B        &kp N         &kp M            &kp COMMA        &kp DOT  &mt_hold_release RIGHT_SHIFT SLASH
+                                               &mt_hold_release LCTRL ESCAPE  &lt 1 UNDER  &kp SPACE    &lt 5 RETURN  &lt 3 BACKSPACE  &one_shot RIGHT_SHIFT
             >;
         };
 
