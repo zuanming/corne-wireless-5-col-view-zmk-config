@@ -112,6 +112,15 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
+
+        one_shot: one_shot {
+            compatible = "zmk,behavior-sticky-key";
+            label = "ONE_SHOT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
     };
 
     keymap {
