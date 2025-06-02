@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define AS(keycode) &as LS(keycode) keycode
+
 &lt {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
@@ -79,10 +81,10 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q             &kp W             &kp E          &kp R               &kp T          &kp Y         &kp U                &kp I          &kp O              &kp P                
-&mt_l LEFT_GUI A  &mt_l LEFT_ALT S  &mt_l LCTRL D  &mt_l LEFT_SHIFT F  &kp G          &kp H         &mt_r RIGHT_SHIFT J  &mt_r RCTRL K  &mt_r RIGHT_ALT L  &mt_r RIGHT_GUI SQT  
-&kp Z             &kp X             &kp C          &kp V               &kp B          &kp N         &kp M                &kp COMMA      &kp DOT            &kp SLASH
-                                                    &lt 4 ESCAPE   &lt 1 TAB           &lt 3 SPACE    &lt 5 RETURN  &lt 2 BACKSPACE      &lt 6 DELETE
+   AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
+   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
+   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
+&lt 4 ESCAPE   &lt 1 TAB  &lt 3 SPACE    &lt 5 RETURN  &lt 2 BACKSPACE      &lt 6 DELETE
             >;
         };
 
@@ -99,9 +101,9 @@
 
         SYMBOLS {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp GRAVE    &none  &none      &none      &none     &none
-&kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        &kp BACKSLASH      &kp SEMI     &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp LS(N9)        &kp LS(N0)        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none        &none  &none      &none      &none     &none
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   AS(GRAVE)   &none  &none      &none      &none     &none
+&kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        AS(BACKSLASH)      A(SEMI)     &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+&kp LS(N9)        &kp LS(N0)        AS(LEFT_BRACKET)  AS(RIGHT_BRACKET)  &none        &none  &none      &none      &none     &none
                                            &none             &none              &none        &none  &none      &none
             >;
 
