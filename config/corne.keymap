@@ -110,7 +110,7 @@
         SYMBOLS {
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   AS(GRAVE)   &none  &none      &none      &none     &none
-&kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        AS(BACKSLASH)      A(SEMI)     &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+&kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        AS(BACKSLASH)      AS(SEMI)     &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
 &kp LS(N9)        &kp LS(N0)        AS(LEFT_BRACKET)  AS(RIGHT_BRACKET)  &none        &none  &none      &none      &none     &none
                                            &none             &none              &none        &none  &none      &none
             >;
