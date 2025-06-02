@@ -24,7 +24,6 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
-  {
     combos {
         compatible = "zmk,combos";
 
