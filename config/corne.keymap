@@ -94,7 +94,7 @@
                            &none      &none      &none    &none       &kp N0  &kp PERIOD
             >;
 
-            label = "num";
+            label = "Num";
         };
 
         SYMBOLS {
@@ -105,7 +105,7 @@
                                            &none             &none              &none        &none  &none      &none
             >;
 
-            label = "sym";
+            label = "Symbols";
         };
 
         Navigation {
@@ -117,7 +117,7 @@
                            &none      &none      &none    &none      &none           &none
             >;
 
-            label = "Navigation";
+            label = "Nav";
         };
 
         Mouse {
@@ -128,7 +128,7 @@
                            &none      &none      &none    &none      &none           &none
             >;
 
-            label = "mouse";
+            label = "Mouse";
         };
 
         media {
@@ -150,7 +150,7 @@
                         &none    &none    &none                 &none  &none            &none
             >;
 
-            label = "fun";
+            label = "Func";
         };
     };
 };
