@@ -39,7 +39,7 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
+            tapping_term_ms = <280>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -99,8 +99,8 @@
         NumSym {
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   AS(GRAVE)    &kp RS(N8)  &kp N7  &kp N8      &kp N9  &kp MINUS      
-&kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        AS(BACKSLASH)      AS(SEMI)    &kp SLASH   &kp N4  &kp N5      &kp N6  &kp RS(EQUAL)
-&kp LS(N9)        &kp LS(N0)        AS(LEFT_BRACKET)  AS(RIGHT_BRACKET)    &kp COMMA   &kp N1  &kp N2      &kp N3  &kp EQUAL
+&kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        AS(BACKSLASH)      AS(SEMI)     &kp SLASH   &kp N4  &kp N5      &kp N6  &kp RS(EQUAL)
+&kp LS(N9)        &kp LS(N0)        AS(LEFT_BRACKET)  AS(RIGHT_BRACKET)  &none        &kp COMMA   &kp N1  &kp N2      &kp N3  &kp EQUAL
                            &none      &none      &none    &none       &kp N0  &kp PERIOD
             >;
 
