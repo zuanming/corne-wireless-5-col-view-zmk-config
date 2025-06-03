@@ -17,7 +17,7 @@
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
     hold-while-undecided;
-    flavor = "balanced";
+    flavor = "hold-preferred";
 };
 
 / {
@@ -28,11 +28,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        Caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <2 3 4>;
-        };
     };
 
     behaviors {
@@ -92,7 +87,7 @@
    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
    AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
    AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  AS(COMMA) AS(DOT)   AS(SLASH)
-&mt LCTRL ESC   &lt 1 TAB  &lt 4 SPACE    &lt 4 RETURN  &lt 2 BACKSPACE     &kp DELETE
+&mt LCTRL ESC   &lt 1 TAB  &lt 4 SPACE    &lt 4 RETURN  &lt 2 BACKSPACE     &lt RSHFT DELETE
             >;
         };
 
