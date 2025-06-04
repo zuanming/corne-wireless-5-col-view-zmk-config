@@ -102,8 +102,8 @@
 
         OneShot {
             bindings = <
-  AS LS(GRAVE) GRAVE  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  AS LS(SQT) SQT  
+  AS(GRAVE)  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  AS(SQT)  
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
                         &trans  &kp TAB  &trans    &trans  &mo 4   &kp DELETE
             >;
@@ -112,17 +112,11 @@
         };
 
        NumSym {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             display-name = "NumSym";
             bindings = <
-  &kp LS(N1)     &kp LS(N2)        &kp LS(N3)  &kp LS(N4)                           &kp LS(N9)                                   &kp LS(N0)                                   &kp N7        &kp N8        &kp N9        &none                    
-  &kp LS(N5)     &kp LS(NUMBER_6)  &kp LS(N7)  AS LS(BACKSLASH) BACKSLASH  AS LS(LEFT_BRACKET) LEFT_BRACKET    AS LS(RIGHT_BRACKET) RIGHT_BRACKET  &kp NUMBER_4  &kp N5        &kp NUMBER_6  AS LS(SQT) SQT  
-  &kp LS(EQUAL)  &kp LS(MINUS)     &kp LS(N8)  &kp LS(SLASH)                        &none                                        &kp EQUAL                                    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                    
+  &kp LS(N1)     &kp LS(N2)        &kp LS(N3)  &kp LS(N4)      &kp LS(N9)          &kp LS(N0)        &kp N7        &kp N8        &kp N9        &none                    
+  &kp LS(N5)     &kp LS(NUMBER_6)  &kp LS(N7)  AS(BACKSLASH)   AS(LEFT_BRACKET)    AS(RIGHT_BRACKET)  &kp NUMBER_4  &kp N5        &kp NUMBER_6  AS(SQT)   
+  &kp LS(EQUAL)  &kp LS(MINUS)     &kp LS(N8)  &kp LS(SLASH)   &none               &kp EQUAL           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                    
                                          &trans      &trans                               &trans                                       &trans                                       &kp N0        &none
             >;
         };
