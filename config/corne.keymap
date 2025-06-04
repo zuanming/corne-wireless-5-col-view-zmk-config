@@ -34,7 +34,7 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <230>;
+            tapping_term_ms = <250>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -134,6 +134,18 @@
             >;
 
             label = "Func";
+        };
+
+
+        OneShot {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
+                        &trans  &trans  &trans    &trans  &mo 3   &kp DELETE
+            >;
+
+            label = "OneShot";
         };
     };
 };
