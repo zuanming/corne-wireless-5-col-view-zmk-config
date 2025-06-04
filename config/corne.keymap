@@ -94,7 +94,7 @@
             display-name = "Base";
             bindings = <
    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
-   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
+   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SEMI)
    AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  AS(COMMA) AS(DOT)   AS(SLASH)
 &mt LCTRL ESC   &lt 2 TAB &lt 4 SPACE  &lt 5 RETURN &lt 3 BACKSPACE &mt_one_shot_mod RIGHT_ALT 1
             >;
@@ -103,7 +103,7 @@
         OneShot {
             bindings = <
   AS(GRAVE)  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  AS(SEMI)  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  AS(SQT)  
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
                         &trans  &kp TAB  &trans    &trans  &mo 4   &kp DELETE
             >;
@@ -115,7 +115,7 @@
             display-name = "NumSym";
             bindings = <
   &kp LS(N1)     &kp LS(N2)        &kp LS(N3)  &kp LS(N4)      &kp LS(N9)          &kp LS(N0)        &kp N7        &kp N8        &kp N9        &none                    
-  &kp LS(N5)     &kp LS(NUMBER_6)  &kp LS(N7)  AS(BACKSLASH)   AS(LEFT_BRACKET)    AS(RIGHT_BRACKET)  &kp NUMBER_4  &kp N5        &kp NUMBER_6  AS(SEMI)   
+  &kp LS(N5)     &kp LS(NUMBER_6)  &kp LS(N7)  AS(BACKSLASH)   AS(LEFT_BRACKET)    AS(RIGHT_BRACKET)  &kp NUMBER_4  &kp N5        &kp NUMBER_6  AS(SQT)   
   &kp LS(EQUAL)  &kp LS(MINUS)     &kp LS(N8)  &kp LS(SLASH)   &none               &kp EQUAL           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                    
                                          &trans      &trans &trans &trans &kp N0 &none
             >;
