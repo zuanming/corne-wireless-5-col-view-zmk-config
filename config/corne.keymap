@@ -39,13 +39,22 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        one_shot: one_shot {
+        one_shot_mod: omo {
             compatible = "zmk,behavior-sticky-key";
-            label = "ONE_SHOT";
-            bindings = <&kp>;
+            label = "omo";
+            bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <1000>;
-            quick-release;
+            release-after-ms = <500>;
+        };
+
+        mt_one_shot_mod: mto {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mto";
+            bindings = <&kp>, <&one_shot_mo>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
 
         mt_l: mt_l {
@@ -87,19 +96,35 @@
    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
    AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
    AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  AS(COMMA) AS(DOT)   AS(SLASH)
-&mt LCTRL ESC   &lt 1 TAB  &lt 3 SPACE    &lt 4 RETURN  &lt 2 BACKSPACE     &mt RSHFT DELETE
+&mt LCTRL ESC   &lt 2 TAB &lt 4 SPACE  &lt 5 RETURN &lt 3 BACKSPACE &mt_one_shot_mod RIGHT_ALT 1
             >;
         };
 
-        NumSym {
+        OneShot {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   AS(GRAVE)    &kp RS(N8)  &kp N7  &kp N8      &kp N9  &kp MINUS      
-&kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        AS(BACKSLASH)      AS(SEMI)     &kp SLASH   &kp N4  &kp N5      &kp N6  &kp RS(EQUAL)
-&kp LS(N9)        &kp LS(N0)        AS(LEFT_BRACKET)  AS(RIGHT_BRACKET)  &none        &kp COMMA   &kp N1  &kp N2      &kp N3  &kp EQUAL
-                           &none      &none      &none    &none       &kp N0  &kp PERIOD
+  &auto_shift LS(GRAVE) GRAVE  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &auto_shift LS(SQT) SQT  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
+                        &trans  &kp TAB  &trans    &trans  &mo 4   &kp DELETE
             >;
 
-            label = "NumSym";
+            label = "OneShot";
+        };
+
+       NumSym {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            display-name = "NumSym";
+            bindings = <
+  &kp LS(N1)     &kp LS(N2)        &kp LS(N3)  &kp LS(N4)                           &kp LS(N9)                                   &kp LS(N0)                                   &kp N7        &kp N8        &kp N9        &none                    
+  &kp LS(N5)     &kp LS(NUMBER_6)  &kp LS(N7)  &auto_shift LS(BACKSLASH) BACKSLASH  &auto_shift LS(LEFT_BRACKET) LEFT_BRACKET    &auto_shift LS(RIGHT_BRACKET) RIGHT_BRACKET  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &auto_shift LS(SQT) SQT  
+  &kp LS(EQUAL)  &kp LS(MINUS)     &kp LS(N8)  &kp LS(SLASH)                        &none                                        &kp EQUAL                                    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                    
+                                         &trans      &trans                               &trans                                       &trans                                       &kp N0        &none
+            >;
         };
 
         Navigation {
@@ -134,18 +159,6 @@
             >;
 
             label = "Func";
-        };
-
-
-        OneShot {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans  
-                        &trans  &trans  &trans    &trans  &mo 3   &kp DELETE
-            >;
-
-            label = "OneShot";
         };
     };
 };
