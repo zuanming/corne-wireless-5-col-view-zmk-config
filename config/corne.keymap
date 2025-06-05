@@ -28,6 +28,16 @@
 
     combos {
         compatible = "zmk,combos";
+
+        lshft {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <25 26>;
+        };
+
+        rshft {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <33 34>;
+        };
     };
 
     behaviors {
@@ -79,7 +89,7 @@
    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
    AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SEMI)
    AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  AS(COMMA) AS(DOT)   AS(SLASH)
-&mt LCTRL ESC   &lt 1 SPACE &kp LSHFT &kp RETURN &lt 2 BACKSPACE &lt 4 DELETE
+&mt LCTRL ESC   &lt 1 TAB &kp SPACE &kp RETURN &lt 2 BACKSPACE &lt 4 DELETE
             >;
         };
 
@@ -88,7 +98,7 @@
             bindings = <
   &kp LS(N1)     &kp LS(N2)        &kp LS(N3)  &kp LS(N4)      &kp LS(N9)          &kp LS(N0)         &kp N7         &kp N8        &kp N9        &none                    
   &kp LS(N5)     &kp LS(NUMBER_6)  &kp LS(N7)  AS(BACKSLASH)   AS(LEFT_BRACKET)    AS(RIGHT_BRACKET)  &kp NUMBER_4   &kp N5        &kp NUMBER_6  AS(SQT)   
-  &kp LS(EQUAL)  &kp LS(MINUS)     &kp LS(N8)  &kp LS(SLASH)   &none               &kp EQUAL          &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &none                    
+  &kp LS(EQUAL)  &kp MINUS         &kp LS(N8)  &kp LS(SLASH)   &kp LS(MINUS)       &kp EQUAL          &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &none                    
                                    &trans      &trans          &trans              &trans             &kp N0         &none
             >;
         };
