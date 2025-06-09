@@ -6,7 +6,7 @@
 #define AS(keycode) &as LS(keycode) keycode
 
 &lt {
-    flavor = "tap-preferred";
+    flavor = "hold-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
     hold-while-undecided;
@@ -87,7 +87,7 @@
    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
    AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SEMI)
    AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  AS(COMMA) AS(DOT)   AS(SLASH)
-&mt LCTRL ESC   &lt 1 TAB &kp SPACE &kp RETURN &lt 2 BACKSPACE &lt 4 DELETE
+&mt LCTRL ESC   &lt 1 TAB &kp SPACE &kp RETURN &lt 2 BACKSPACE &mt_tap ALT DELETE
             >;
         };
 
@@ -97,7 +97,7 @@
   &kp LS(N1)     &kp LS(N2)        &kp LS(N3)  &kp LS(N4)      &kp LS(N9)          &kp LS(N0)         &kp N7         &kp N8        &kp N9        &none                    
   &kp LS(N5)     &kp LS(NUMBER_6)  &kp LS(N7)  AS(BACKSLASH)   AS(LEFT_BRACKET)    AS(RIGHT_BRACKET)  &kp NUMBER_4   &kp N5        &kp NUMBER_6  AS(SQT)   
   &kp LS(EQUAL)  &kp MINUS         &kp LS(N8)  &kp LS(SLASH)   &kp LS(MINUS)       &kp EQUAL          &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &none                    
-                                   &trans      &trans          &trans              &trans             &kp N0         &none
+                                   &trans      &trans          &trans              &mo 4             &kp N0         &none
             >;
         };
 
