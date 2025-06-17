@@ -124,6 +124,13 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
+
+        tap_dance_sqt_semi: td_sqt_semi {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SQT_SEMI";
+            #binding-cells = <0>;
+            bindings = <&as LS(SQT) SQT>, <&as LS(SEMICOLON) SEMICOLON>;
+        };
     };
 
     keymap {
@@ -132,18 +139,18 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R          &as LS(T) T            &as RS(Y) Y            &as RS(U) U    &as RS(I) I                  &as RS(O) O  &as RS(P) P  &as LS(A) A      &as LS(S) S
-&as LS(D) D  &as LS(F) F  &as LS(G) G  &as RS(H) H          &as RS(J) J            &as RS(K) K            &as RS(L) L    &as RS(SEMICOLON) SEMICOLON  &as LS(Z) Z  &as LS(X) X  &as C C          &as LS(V) V
-&as LS(B) B  &as RS(N) N  &as RS(M) M  &as RS(COMMA) COMMA  &as RS(PERIOD) PERIOD  &as RS(SLASH) SLASH    &mt LCTRL ESC  &kp LEFT_SHIFT               &kp SPACE    &kp RETURN   &lt 2 BACKSPACE  &kp DELETE
+&kp Q  &kp W  &kp E  &kp R                &kp T               &kp Y                  &kp U          &kp I                &kp O      &kp P       &kp A                &kp S
+&kp D  &kp F  &kp G  &kp H                &kp J               &kp K                  &kp L          &tap_dance_sqt_semi  &kp Z      &kp X       &kp C                &kp V
+&kp B  &kp N  &kp M  &as RS(COMMA) COMMA  &as RS(DOT) PERIOD  &as RS(SLASH) SLASH    &mt LCTRL ESC  &kp LEFT_SHIFT       &kp SPACE  &kp RETURN  &lt_bal 2 BACKSPACE  &lt_bal 4 DEL
             >;
         };
 
         NumSym {
             display-name = "NumSym";
             bindings = <
-&kp LS(N1)  &kp LS(N2)     &kp LS(N3)                         &kp LS(N4)                           &kp LS(N9)    &kp LS(N0)    &kp N7        &kp N8           &kp N9         &none      &kp LS(N5)  &kp LS(NUMBER_6)
-&kp LS(N7)  &kp BACKSLASH  &as LS(LEFT_BRACKET) LEFT_BRACKET  &as RS(RIGHT_BRACKET) RIGHT_BRACKET  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &as RS(SQT) SQT  &kp LS(EQUAL)  &kp MINUS  &kp LS(N8)  &kp LS(SLASH)
-&none       &none          &kp NUMBER_1                       &kp NUMBER_2                         &kp NUMBER_3  &none         &trans        &trans           &trans         &kp EQUAL  &kp N0      &none
+&kp LS(N1)  &kp LS(N2)     &kp LS(N3)                         &kp LS(N4)                           &kp LS(N9)    &kp LS(N0)    &kp N7        &kp N8           &kp N9         &none                &kp LS(N5)  &kp LS(NUMBER_6)
+&kp LS(N7)  &kp BACKSLASH  &as LS(LEFT_BRACKET) LEFT_BRACKET  &as RS(RIGHT_BRACKET) RIGHT_BRACKET  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &as RS(SQT) SQT  &kp LS(EQUAL)  &as LS(MINUS) MINUS  &kp LS(N8)  &kp LS(SLASH)
+&none       &none          &kp NUMBER_1                       &kp NUMBER_2                         &kp NUMBER_3  &none         &trans        &trans           &trans         &kp EQUAL            &kp N0      &none
             >;
         };
 
@@ -152,7 +159,7 @@
             bindings = <
 &none  &none  &none  &none     &none           &none             &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &none  &none  &none
 &none  &none  &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT    &kp END       &none          &none  &none  &none
-&none  &none  &none  &none     &none           &none             &none        &mo 3         &none          &none  &none  &none
+&none  &none  &none  &none     &none           &none             &none        &mo 3         &kp TAB        &none  &none  &none
             >;
 
             label = "Nav";
@@ -176,6 +183,15 @@
             >;
 
             label = "Func";
+        };
+
+        layer_5 {
+            display-name = "Base";
+            bindings = <
+&as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R          &as LS(T) T            &as RS(Y) Y            &as RS(U) U    &as RS(I) I                  &as RS(O) O  &as RS(P) P  &as LS(A) A          &as LS(S) S
+&as LS(D) D  &as LS(F) F  &as LS(G) G  &as RS(H) H          &as RS(J) J            &as RS(K) K            &as RS(L) L    &as RS(SEMICOLON) SEMICOLON  &as LS(Z) Z  &as LS(X) X  &as C C              &as LS(V) V
+&as LS(B) B  &as RS(N) N  &as RS(M) M  &as RS(COMMA) COMMA  &as RS(PERIOD) PERIOD  &as RS(SLASH) SLASH    &mt LCTRL ESC  &kp LEFT_SHIFT               &kp SPACE    &kp RETURN   &lt_bal 2 BACKSPACE  &lt_bal 4 DEL
+            >;
         };
     };
 };
