@@ -11,7 +11,8 @@ manifest:
     path: config
 
   group-filter: [-optional]
-    extensions:
+  
+  extensions:
       zephyr:
         modules:
           - path: modules/zmk-shield-corne-right-ssd1306
