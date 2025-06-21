@@ -11,7 +11,7 @@ manifest:
 
     - name: ssd1306
       path: modules/ssd1306
-      zephyr: true  # ✅ This is what registers it as a Zephyr module
+      zephyr: true  
 
   self:
     path: config
