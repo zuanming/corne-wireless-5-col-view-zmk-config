@@ -21,23 +21,6 @@
 };
 
 / {
-    zephyr,display = &ssd1306;
-};
-
-&i2c1 {
-    ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        label = "SSD1306";
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        reset-gpios = <&gpio0 15 0>;
-    };
-};
-
-/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
