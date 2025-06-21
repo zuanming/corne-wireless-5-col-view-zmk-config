@@ -12,7 +12,7 @@ manifest:
     - name: ssd1306
       path: modules/ssd1306
       revision: ""
-      remote: none   
+      remote: zmkfirmware   
 
   self:
     path: config
