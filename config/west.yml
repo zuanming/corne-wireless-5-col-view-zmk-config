@@ -11,8 +11,8 @@ manifest:
 
     - name: ssd1306
       path: modules/ssd1306
+      revision: ""
       remote: none   
-      url: ""    
 
   self:
     path: config
