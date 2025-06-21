@@ -1,0 +1,3 @@
+config SHIELD_CORNE_RIGHT_SSD1306
+    bool "Corne Right with SSD1306"
+    select ZMK_DISPLAY
