@@ -1,1 +1,18 @@
+// SSD1306 display configuration overlay for Corne keyboard (ZMK Typeractive fork)
 
+&i2c1 {
+    compatible = "nordic,nrf-twi";
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_400K>;
+
+    ssd1306: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;                  // I2C address of SSD1306
+        label = "SSD1306";             // Label referenced by zmk, must match in keymap config
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;          // Common offset, can leave as 0 for most SSD1306
+        reset-gpios = <&gpio0 10 0>;   // Modify or remove this line if RESET not used
+        framebuffer-refresh = <15>;    // Adjust this value to save battery (e.g., 15, 30, or 60 Hz)
+    };
+};
