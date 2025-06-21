@@ -9,3 +9,9 @@ manifest:
       import: app/west.yml
   self:
     path: config
+
+  group-filter: [-optional]
+    extensions:
+      zephyr:
+        modules:
+          - path: modules/zmk-shield-corne-right-ssd1306
