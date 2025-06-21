@@ -9,10 +9,5 @@ manifest:
       revision: main
       import: app/west.yml
 
-    - name: ssd1306
-      path: modules/ssd1306
-      revision: ""
-      remote: zmkfirmware   
-
   self:
     path: config
