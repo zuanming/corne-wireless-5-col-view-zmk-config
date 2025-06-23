@@ -21,8 +21,9 @@
 };
 
 / {
-    chosen { 
-        zmk,matrix-transform = &five_column_transform; 
+    chosen {
+        zmk,matrix-transform = &five_column_transform;
+
         //zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
@@ -31,57 +32,7 @@
 
         Caps {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <20 21 28 29>;
-        };
-
-        numsym_l {
-            bindings = <&mo 1>;
-            key-positions = <11 12>;
-        };
-
-        numsym_r {
-            bindings = <&mo 1>;
-            key-positions = <18 17>;
-        };
-
-        left_parenthesis {
-            bindings = <&kp LS(N9)>;
-            key-positions = <23 22>;
-        };
-
-        right_parenthesis {
-            bindings = <&kp RS(N0)>;
-            key-positions = <26 27>;
-        };
-
-        left_brace {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <12 13>;
-        };
-
-        right_brace {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <17 16>;
-        };
-
-        left_bracket {
-            bindings = <&kp LS(LEFT_BRACKET)>;
-            key-positions = <3 2>;
-        };
-
-        right_bracket {
-            bindings = <&kp RS(RIGHT_BRACKET)>;
-            key-positions = <6 7>;
-        };
-
-        shift_l {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <10 11>;
-        };
-
-        shift_r {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <18 19>;
+            key-positions = <20 29>;
         };
     };
 
@@ -141,18 +92,18 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R                &kp T               &kp Y                  &kp U          &kp I                &kp O      &kp P       &kp A                &kp S
-&kp D  &kp F  &kp G  &kp H                &kp J               &kp K                  &kp L          &tap_dance_sqt_semi  &kp Z      &kp X       &kp C                &kp V
-&kp B  &kp N  &kp M  &as RS(COMMA) COMMA  &as RS(DOT) PERIOD  &as RS(SLASH) SLASH    &mt LCTRL ESC  &kp LEFT_SHIFT       &kp SPACE  &kp RETURN  &lt_bal 2 BACKSPACE  &lt_bal 4 DEL
+&kp Q  &kp W  &kp E  &kp R                &kp T               &kp Y                  &kp U          &kp I              &kp O                 &kp P                      &kp A                &kp S
+&kp D  &kp F  &kp G  &kp H                &kp J               &kp K                  &kp L          &as SQT SEMICOLON  &kp Z                 &kp X                      &kp C                &kp V
+&kp B  &kp N  &kp M  &as RS(COMMA) COMMA  &as RS(DOT) PERIOD  &as RS(SLASH) SLASH    &mt LCTRL ESC  &lt 1 UNDER        &mt LEFT_SHIFT SPACE  &mt_tap RIGHT_SHIFT ENTER  &lt_bal 2 BACKSPACE  &lt_bal 4 DEL
             >;
         };
 
         NumSym {
             display-name = "NumSym";
             bindings = <
-&kp LS(N1)  &kp LS(N2)     &kp LS(N3)                         &kp LS(N4)                           &kp LS(N9)    &kp LS(N0)    &kp N7        &kp N8           &kp N9         &none                &kp LS(N5)  &kp LS(NUMBER_6)
-&kp LS(N7)  &kp BACKSLASH  &as LS(LEFT_BRACKET) LEFT_BRACKET  &as RS(RIGHT_BRACKET) RIGHT_BRACKET  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &as RS(SQT) SQT  &kp LS(EQUAL)  &as LS(MINUS) MINUS  &kp LS(N8)  &kp LS(SLASH)
-&none       &none          &kp NUMBER_1                       &kp NUMBER_2                         &kp NUMBER_3  &none         &trans        &trans           &trans         &kp EQUAL            &kp N0      &none
+&kp LS(N1)  &kp LS(N2)                                 &kp LS(N3)    &kp LS(N4)    &kp GRAVE     &kp ASTERISK    &kp N7        &kp N8    &kp N9      &kp MINUS   &kp LS(N5)                         &kp LS(NUMBER_6)
+&kp LS(N7)  &as LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &none         &kp SLASH     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &kp PLUS  &kp LS(N9)  &kp RS(N0)  &as LS(LEFT_BRACKET) LEFT_BRACKET  &as RS(RIGHT_BRACKET) RIGHT_BRACKET
+&none       &kp COMMA                                  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL       &trans        &trans    &trans      &trans      &kp N0                             &kp PERIOD
             >;
         };
 
@@ -161,7 +112,7 @@
             bindings = <
 &none  &none  &none  &none     &none           &none             &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &none  &none  &none
 &none  &none  &none  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT    &kp END       &none          &none  &none  &none
-&none  &none  &none  &none     &none           &none             &none        &mo 3         &kp TAB        &none  &none  &none
+&none  &none  &none  &none     &none           &none             &none        &kp TAB       &kp TAB        &none  &none  &none
             >;
 
             label = "Nav";
@@ -181,19 +132,31 @@
             bindings = <
 &kp F1           &kp F2  &kp F3              &kp F4                &kp CAPS    &kp C_BRIGHTNESS_INC    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &bt BT_NXT  &kp F5   &kp F6
 &kp F7           &kp F8  &kp LC(LA(DELETE))  &kp C_BRIGHTNESS_DEC  &kp C_PREV  &kp C_PLAY_PAUSE        &kp C_NEXT  &bt BT_PRV    &kp F9        &kp F10     &kp F11  &kp F12
-&kp PRINTSCREEN  &none   &none               &none                 &none       &bt BT_CLR              &none       &none         &none         &none       &none    &none
+&kp PRINTSCREEN  &none   &none               &none                 &none       &bt BT_CLR              &mo 6       &none         &none         &none       &none    &none
             >;
 
             label = "Func";
         };
 
-        layer_5 {
+        Bluetooth {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans      &trans        &trans  &trans      &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &bt BT_PRV  &bt BT_NXT    &trans  &bt BT_CLR  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans        &trans  &trans      &trans  &trans  &trans  &trans
+            >;
+
+            label = "bluetooth";
+        };
+
+        AutoShift {
             display-name = "Base";
             bindings = <
 &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R          &as LS(T) T            &as RS(Y) Y            &as RS(U) U    &as RS(I) I                  &as RS(O) O  &as RS(P) P  &as LS(A) A          &as LS(S) S
 &as LS(D) D  &as LS(F) F  &as LS(G) G  &as RS(H) H          &as RS(J) J            &as RS(K) K            &as RS(L) L    &as RS(SEMICOLON) SEMICOLON  &as LS(Z) Z  &as LS(X) X  &as C C              &as LS(V) V
 &as LS(B) B  &as RS(N) N  &as RS(M) M  &as RS(COMMA) COMMA  &as RS(PERIOD) PERIOD  &as RS(SLASH) SLASH    &mt LCTRL ESC  &kp LEFT_SHIFT               &kp SPACE    &kp RETURN   &lt_bal 2 BACKSPACE  &lt_bal 4 DEL
             >;
+
+            label = "autoshift";
         };
     };
 };
