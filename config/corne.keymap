@@ -20,8 +20,6 @@
 
 / {
     chosen {
-        //zmk,matrix-transform = &five_column_transform;
-
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
@@ -76,12 +74,6 @@
             quick-tap-ms = <200>;
         };
 
-        tap_dance_sqt_semi: td_sqt_semi {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SQT_SEMI";
-            #binding-cells = <0>;
-            bindings = <&as LS(SQT) SQT>, <&as LS(SEMICOLON) SEMICOLON>;
-        };
     };
 
     keymap {
