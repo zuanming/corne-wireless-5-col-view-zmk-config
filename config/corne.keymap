@@ -31,18 +31,23 @@
         compatible = "zmk,combos";
 
         Caps {
-            bindings = <&kp CAPSLOCK>;
+            bindings = <&kp CAPS>;
             key-positions = <20 29>;
         };
 
-        alt {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <28 29>;
+        gui {
+            bindings = <&caps_word>;
+            key-positions = <27 28>;
         };
 
-        gui {
-            bindings = <&kp RIGHT_GUI>;
-            key-positions = <27 28>;
+        shift_l {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <20 21>;
+        };
+
+        shift_r {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <28 29>;
         };
     };
 
@@ -88,11 +93,13 @@
             quick-tap-ms = <200>;
         };
 
-        tap_dance_sqt_semi: td_sqt_semi {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SQT_SEMI";
-            #binding-cells = <0>;
-            bindings = <&as LS(SQT) SQT>, <&as LS(SEMICOLON) SEMICOLON>;
+        oneshot: oneshot {
+            compatible = "zmk,behavior-sticky-key";
+            label = "os";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
         };
     };
 
