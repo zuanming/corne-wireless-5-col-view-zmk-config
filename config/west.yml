@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: zuanming
-      url-base: https://github.com/mctechnology17
+      url-base: https://github.com/zuanming
 
   projects:
     - name: zmk
@@ -11,6 +11,9 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-oled-adapter
+      remote: zuanming
+      revision: main
+    - name: zmk-nice-oled
       remote: zuanming
       revision: main
   self:
