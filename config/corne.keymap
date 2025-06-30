@@ -20,6 +20,8 @@
     flavor = "hold-preferred";
 };
 
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE>; };
+
 / {
     chosen {
         zmk,matrix-transform = &five_column_transform;
@@ -37,7 +39,7 @@
 
         gui {
             bindings = <&caps_word>;
-            key-positions = <27 28>;
+            key-positions = <28 27>;
         };
 
         shift_l {
