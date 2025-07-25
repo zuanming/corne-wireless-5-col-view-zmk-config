@@ -19,5 +19,8 @@ manifest:
     - name: zmk-dongle
       remote: zuanming
       revision: main
+    - name: zmk-dongle-display
+      remote: zuanming
+      revision: main
   self:
     path: config
