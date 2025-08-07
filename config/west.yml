@@ -21,12 +21,8 @@ manifest:
     - name: zmk-dongle
       remote: zuanming
       revision: main
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
-    - name: zmk-config
+    - name: zmk-dongle-display
       remote: englmaxi
-      revision: master
+      revision: main
   self:
     path: config
