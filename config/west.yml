@@ -27,8 +27,8 @@ manifest:
     - name: zmk-dongle-display
       remote: zuanming
       revision: main
-    - name: zmk_dongle_display_view
-      remote: englmaxi
-      revision: main
+    # - name: zmk_dongle_display_view
+    #   remote: englmaxi
+    #   revision: main
   self:
     path: config
