@@ -30,7 +30,7 @@ manifest:
       remote: englmaxi
       revision: v0.3
     - name: zmk-config
-      remote: mctechnology17
+      remote: zuanming
       revision: main
   self:
     path: config
