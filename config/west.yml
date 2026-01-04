@@ -21,7 +21,7 @@ manifest:
       remote: mctechnology17
       revision: main
     - name: zmk-nice-oled
-      remote: zuanming
+      remote: mctechnology17
       revision: main
     # - name: zmk-dongle
     #   remote: zuanming
