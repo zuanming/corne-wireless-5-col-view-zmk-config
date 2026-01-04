@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/zuanming
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
       
   projects:
     - name: zmk
@@ -16,14 +18,14 @@ manifest:
       remote: zuanming                       
       revision: main   
     - name: zmk-oled-adapter
-      remote: zuanming
+      remote: englmaxi
       revision: main
     - name: zmk-nice-oled
       remote: zuanming
       revision: main
-    - name: zmk-dongle
-      remote: zuanming
-      revision: main
+    # - name: zmk-dongle
+    #   remote: zuanming
+    #   revision: main
     - name: zmk-dongle-display
       remote: englmaxi
       revision: v0.3
