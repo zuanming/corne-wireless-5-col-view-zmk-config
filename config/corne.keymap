@@ -98,23 +98,62 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q                &kp W                &kp E               &kp R                &kp T               &kp Y                  &kp U          &kp I              &kp O               &kp P            
-&kp A                &kp S                &kp D               &kp F                  &kp G          &kp H              &kp J               &kp K                  &kp L          &kp SQT 
-&kp Z                 &kp X            &kp C                &kp V                    &kp B           &kp N             &kp M                 &kp COMMA      &kp PERIOD          &kp SLASH    
-                                     &mt LCTRL ESC  &kp ESC   &kp SPACE  &lt 2 ENTER  &lt 2 BACKSPACE  &mt RIGHT_ALT DEL
+&kp Q  &kp W  &kp E  &kp R                &kp T               &kp Y                  &kp U          &kp I              &kp O      &kp P  &kp A  &kp S
+&kp D  &kp F  &kp G  &kp H                &kp J               &kp K                  &kp L          &as SQT SEMICOLON  &kp Z      &kp X  &kp C  &kp V
+&kp B  &kp N  &kp M  &as RS(COMMA) COMMA  &as RS(DOT) PERIOD  &as RS(SLASH) SLASH    &mt LCTRL ESC  &none              &kp SPACE  &none  &none  &none
             >;
         };
 
-        Bluetooth {
+        Number {
+            display-name = "NumSym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans      &trans        &trans  &trans      &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &bt BT_PRV  &bt BT_NXT    &trans  &bt BT_CLR  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans        &trans  &trans      &trans  &trans  &trans  &trans
+&none     &none      &none         &none         &none         &kp ASTERISK    &kp N7        &kp N8    &kp N9  &kp MINUS  &kp LCTRL  &kp LALT
+&kp LGUI  &kp LSHFT  &none         &kp SLASH     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &kp PLUS  &none   &none      &none      &none
+&none     &kp COMMA  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH       &trans        &trans    &trans  &kp EQUAL  &kp N0     &kp PERIOD
             >;
 
-            label = "bluetooth";
+            label = "Num";
         };
 
+        Symbol {
+            display-name = "Sam";
+            bindings = <
+&kp LS(N1)  &kp LS(N2)            &kp LS(N3)  &kp LS(N4)  &kp GRAVE  &none       &none     &none      &none       &none       &kp LS(N5)                         &kp LS(NUMBER_6)
+&kp LS(N7)  &kp NON_US_BACKSLASH  &kp SEMI    &none       &kp RSHFT  &kp RGUI    &kp RALT  &kp RCTRL  &kp LS(N9)  &kp RS(N0)  &as LS(LEFT_BRACKET) LEFT_BRACKET  &as RS(RIGHT_BRACKET) RIGHT_BRACKET
+&none       &none                 &none       &none       &none      &none       &none     &none      &none       &none       &none                              &none
+            >;
 
+            label = "Sym";
+        };
+
+        Navigation {
+            display-name = "Navigation";
+            bindings = <
+&none     &none               &none               &none             &none           &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none  &kp LCTRL  &kp LALT
+&kp LGUI  &kp LSHFT           &none               &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT      &none        &none    &none  &none      &none
+&none     &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp RG(UP_ARROW)  &kp RG(RIGHT)   &none           &none          &none        &none    &none  &none      &none
+            >;
+
+            label = "Nav";
+        };
+
+        Function {
+            bindings = <
+&kp F1           &kp F2  &kp F3              &kp F4  &kp CAPS   &none       &none     &none      &none   &none    &kp F5   &kp F6
+&kp F7           &kp F8  &kp LC(LA(DELETE))  &none   &kp RSHFT  &kp RGUI    &kp RALT  &kp RCTRL  &kp F9  &kp F10  &kp F11  &kp F12
+&kp PRINTSCREEN  &none   &none               &none   &none      &none       &none     &none      &none   &none    &none    &none
+            >;
+
+            label = "Func";
+        };
+
+        Media {
+            label = "Media";
+            bindings = <
+&none     &none      &none  &none                 &none       &kp C_BRIGHTNESS_INC    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &kp LCTRL  &kp LALT
+&kp LGUI  &kp LSHFT  &none  &kp C_BRIGHTNESS_DEC  &kp C_PREV  &kp C_PLAY_PAUSE        &kp C_NEXT  &none         &none         &none  &none      &none
+&none     &none      &none  &none                 &none       &none                   &none       &none         &none         &none  &none      &none
+            >;
+        };
     };
 };
