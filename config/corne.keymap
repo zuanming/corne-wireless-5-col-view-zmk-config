@@ -21,15 +21,6 @@
             key-positions = <31 34>;
         };
 
-        shift_l {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <20 21>;
-        };
-
-        shift_r {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <28 29>;
-        };
     };
 
     behaviors {
