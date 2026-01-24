@@ -48,17 +48,26 @@
 
         home_row_mod_right: hrm_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MOD";
+            label = "HOME_ROW_MOD_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            retro-tap;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
+        home_row_mod_left: hrm_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_MOD_LEFT";
+            bindings = <&kp>, <&kp>;
 
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+        };
         ltmiryoku: mlt {
             compatible = "zmk,behavior-hold-tap";
             label = "LTMIRYOKU";
@@ -69,17 +78,6 @@
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
-        };
-
-        home_row_mod_left: hrm_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MOD_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
         };
     };
 
