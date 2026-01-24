@@ -86,65 +86,68 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             display-name = "Base";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R                &kp T               &kp Y                  &kp U          &kp I              &kp O      &kp P  &kp A  &kp S
-&kp D  &kp F  &kp G  &kp H                &kp J               &kp K                  &kp L          &kp SQT   &kp Z      &kp X  &kp C  &kp V
-&kp B  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH    &mt LCTRL ESC  &none              &kp SPACE  &none  &none  &none
+   &kp Q                          &kp W                          &kp E                              &kp R                            &kp T                 &kp Y                &kp U                              &kp I                                &kp O                            &kp P                                   
+  &home_row_mod_left LEFT_GUI A  &home_row_mod_left LEFT_ALT S  &home_row_mod_left LEFT_CONTROL D  &home_row_mod_left LEFT_SHIFT F  &kp G                 &kp H                &home_row_mod_right RIGHT_SHIFT J  &home_row_mod_right RIGHT_CONTROL K  &home_row_mod_right RIGHT_ALT L  &home_row_mod_right RIGHT_GUI SEMICOLON  
+   &kp Z                          &kp X                          &kp C                              &kp V                            &kp B                 &kp N                &kp M                              &kp COMMA                            &kp DOT                          &kp FSLH                                
+                                                                          &ltmiryoku 1 ESCAPE                &ltmiryoku 3 TAB                 &ltmiryoku 5 SPACE    &ltmiryoku 4 RETURN  &ltmiryoku 2 BACKSPACE             &kp DELETE
             >;
         };
 
-        Number {
-            display-name = "NumSym";
+        Nav {
             bindings = <
-&none     &none      &none         &none         &none         &kp ASTERISK    &kp N7        &kp N8    &kp N9  &kp MINUS  &kp LCTRL  &kp LALT
-&kp LGUI  &kp LSHFT  &none         &kp SLASH     &kp NUMBER_4  &kp N5          &kp NUMBER_6  &kp PLUS  &none   &none      &none      &none
-&none     &kp COMMA  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH       &trans        &trans    &trans  &kp EQUAL  &kp N0     &kp PERIOD
-            >;
-
-            label = "Num";
-        };
-
-        Symbol {
-            display-name = "Sam";
-            bindings = <
-&kp LS(N1)  &kp LS(N2)            &kp LS(N3)  &kp LS(N4)  &kp GRAVE  &none       &none     &none      &none       &none       &kp LS(N5)                         &kp LS(NUMBER_6)
-&kp LS(N7)  &kp NON_US_BACKSLASH  &kp SEMI    &none       &kp RSHFT  &kp RGUI    &kp RALT  &kp RCTRL  &kp LS(N9)  &kp RS(N0)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&none       &none                 &none       &none       &none      &none       &none     &none      &none       &none       &none                              &none
-            >;
-
-            label = "Sym";
-        };
-
-        Navigation {
-            display-name = "Navigation";
-            bindings = <
-&none     &none               &none               &none             &none           &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none  &kp LCTRL  &kp LALT
-&kp LGUI  &kp LSHFT           &none               &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT      &none        &none    &none  &none      &none
-&none     &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp RG(UP_ARROW)  &kp RG(RIGHT)   &none           &none          &none        &none    &none  &none      &none
+  &none     &none     &none      &none      &none    &none       &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kt END    
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &caps_word  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  
+  &none     &none     &none      &none      &none    &none       &kp HOME  &kt PAGE_DOWN  &kp PG_UP     &sk END    
+                           &none      &none      &none    &none       &none     &none
             >;
 
             label = "Nav";
         };
 
-        Function {
+        Sym {
             bindings = <
-&kp F1           &kp F2  &kp F3              &kp F4  &kp CAPS   &none       &none     &none      &none   &none    &kp F5   &kp F6
-&kp F7           &kp F8  &kp LC(LA(DELETE))  &none   &kp RSHFT  &kp RGUI    &kp RALT  &kp RCTRL  &kp F9  &kp F10  &kp F11  &kp F12
-&kp PRINTSCREEN  &none   &none               &none   &none      &none       &none     &none      &none   &none    &none    &none
+  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kt GRAVE        &none  &none      &none      &none     &none     
+  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp BSLH    &kp SEMI         &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  
+  &kp LS(N9)  &kp LS(N0)  &kp LBKT    &kp RBKT    &none            &none  &none      &none      &none     &none     
+                               &none       &none       &kp LS(MINUS)    &none  &none      &none
             >;
 
-            label = "Func";
+            label = "Sym";
+        };
+
+        Num {
+            label = "Num";
+            bindings = <
+  &none     &none     &none      &none      &none    &kp N8     &kp N7  &kp N8   &kp N9  &kp MINUS  
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp FSLH   &kp N4  &kp N5   &kp N6  &kp EQUAL  
+  &none     &none     &none      &none      &none    &kp COMMA  &kp N1  &kp N2   &kp N3  &kp FSLH   
+                           &none      &none      &none    &kp EQUAL  &kp N0  &kp DOT
+            >;
         };
 
         Media {
-            label = "Media";
             bindings = <
-&none     &none      &none  &none                 &none       &kp C_BRIGHTNESS_INC    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &kp LCTRL  &kp LALT
-&kp LGUI  &kp LSHFT  &none  &kp C_BRIGHTNESS_DEC  &kp C_PREV  &kp C_PLAY_PAUSE        &kp C_NEXT  &none         &none         &none  &none      &none
-&none     &none      &none  &none                 &none       &none                   &none       &none         &none         &none  &none      &none
+  &none  &none  &none  &none  &none    &none  &kp C_MUTE      &kp C_VOL_DN      &kp C_VOLUME_UP  &none  
+  &none  &none  &none  &none  &none    &none  &kt C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT       &none  
+  &none  &none  &none  &none  &none    &none  &none           &none             &none            &none  
+                     &none  &none  &none    &none  &none           &none
             >;
+
+            label = "Media";
+        };
+
+        Function {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "Function";
         };
     };
 };
