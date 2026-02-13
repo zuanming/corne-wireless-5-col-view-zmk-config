@@ -6,19 +6,7 @@
 / {
     chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
 
-    combos {
-        compatible = "zmk,combos";
-
-        Caps {
-            bindings = <&kp CAPS>;
-            key-positions = <20 29>;
-        };
-
-        Capsword {
-            bindings = <&caps_word>;
-            key-positions = <31 34>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         oneshot: oneshot {
